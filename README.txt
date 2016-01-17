@@ -1,9 +1,9 @@
 Mega Man X3 MSU-1 hack
-Version 1.0
+Version 1.0.1
 by DarkShock
 
 This hack adds CD quality audio to Mega Man X3 using the MSU-1 chip invented by byuu.
-The hack has been tested on SD2SNES and higan 094. The patched ROM needs to be named mmx3_msu1.sfc.
+The hack has been tested on SD2SNES, bsnes-plus and higan 094. The patched ROM needs to be named mmx3_msu1.sfc.
 
 Note they are two IPS patches:
 - mmx3_msu1_emulator.ips is the one to use for proper volume in emulators.

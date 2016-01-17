@@ -12,7 +12,7 @@ copy mmx3_msu1.ips MegaManX3_MSU1
 copy mmx3_msu1_emulator.ips MegaManX3_MSU1
 copy README.txt MegaManX3_MSU1
 copy mmx3_msu1.msu MegaManX3_MSU1
-rem copy mmx3_msu1.xml MegaManX3_MSU1
+copy mmx3_msu1.xml MegaManX3_MSU1
 copy manifest.bml MegaManX3_MSU1
 "C:\Program Files\7-Zip\7z" a -r MegaManX3_MSU1.zip MegaManX3_MSU1
 
