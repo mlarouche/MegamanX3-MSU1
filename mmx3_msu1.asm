@@ -59,15 +59,41 @@ seek($068075)
 	
 // Play Music Routine
 seek($0084E4)
+if {defined ZERO_PROJECT} {
+	jsr ZeroProjectMSUMain
+} else {
 	jsr MSU_Main
+}
 	pla
 	rts
-	
+
 // Play SFX routine
 seek($088442)
 	jsl MSU_SFXAndCommand
-	
+
+// MSU-1 Main
+if {defined ZERO_PROJECT} {
+seek($00FD80)
+ZeroProjectMSUMain:
+	jsl MSU_Main
+	bcs +
+	rts
++
+	// Pop return address
+	rep #$20
+	pla
+	sep #$20
+	// Original Code
+	jsr $84FD
+	pla
+	sta $7EFFFD
+	ldy #$FA
+	jmp $83D5
+
+seek($0CF460)
+} else {
 seek($00FD20)
+}
 scope MSU_Main: {
 	php
 	// Backup A and Y in 16 bit mode
@@ -116,8 +142,13 @@ CheckMSUAudioStatus:
 	ply
 	pla
 	plp
+if {defined ZERO_PROJECT} {
+	clc
+	rtl
+} else {
 	rts
-	
+}
+
 TrackIsMissing:
 	// Reset the fade state machine and drop the volume
 	// on track missing
@@ -131,6 +162,10 @@ OriginalCode:
 	pla
 	plp
 	
+if {defined ZERO_PROJECT} {
+	sec
+	rtl
+} else {
 	// Pop return address
 	rep #$20
 	pla
@@ -141,6 +176,7 @@ OriginalCode:
 	sta $7EFFFD
 	ldy #$FA
 	jmp $83D5
+}
 }
 
 scope TrackNeedLooping: {

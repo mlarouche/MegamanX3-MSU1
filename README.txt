@@ -1,13 +1,26 @@
 Mega Man X3 MSU-1 hack
-Version 1.0.1
+Version 1.1
 by DarkShock
 
-This hack adds CD quality audio to Mega Man X3 using the MSU-1 chip invented by byuu.
+This hack adds CD quality audio to Mega Man X3 and Mega Man X3 Zero Project using the MSU-1 chip invented by byuu.
 The hack has been tested on SD2SNES, bsnes-plus and higan 094. The patched ROM needs to be named mmx3_msu1.sfc.
 
-Note they are two IPS patches:
+Note they are 4 IPS patches:
 - mmx3_msu1_emulator.ips is the one to use for proper volume in emulators.
 - mmx3_msu1.ips is for the SD2SNES
+- mmx3_msu1_zero_emulator.ips is for Zero Project to use in emulators
+- mmx3_msu1_zero.ips is for Zero Project to use on the SD2SNES
+
+Original specs of the ROM:
+MEGAMAN X3
+2097152 Bytes (16.0000 Mb)
+Padded: Maybe, 2887 Bytes (0.0220 Mb)
+Interleaved/Swapped: No
+Backup unit/emulator header: No
+Version: 1.0
+Checksum: Ok, 0x4055 (calculated) == 0x4055 (internal)
+Inverse checksum: Ok, 0xbfaa (calculated) == 0xbfaa (internal)
+Checksum (CRC32): 0xfa0fe671
 
 ===============
 = Using higan =
@@ -69,10 +82,8 @@ Source is availabe on GitHub: https://github.com/mlarouche/MegamanX3-MSU1
 
 To compile the hack you need
 
-* bass v14 (https://web.archive.org/web/20140710190910/http://byuu.org/files/bass_v14.tar.xz)
+* bass v14 (http://files.byuu.org/download/bass_v14.tar.xz)
 * wav2msu (https://github.com/mlarouche/wav2msu)
-
-The rom needs to be named mmx3_msu1.sfc and be the version 1.1 of the game.
 
 To distribute the hack you need
 

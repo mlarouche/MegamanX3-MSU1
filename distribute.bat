@@ -8,8 +8,16 @@ ucon64 -q --snes --chk mmx3_msu1.sfc
 ucon64 -q --mki=mmx3_original.sfc mmx3_msu1.sfc
 ucon64 -q --snes --chk mmx3_msu1_emulator.sfc
 ucon64 -q --mki=mmx3_original.sfc mmx3_msu1_emulator.sfc
+
+ucon64 -q --snes --chk mmx3_msu1_zero.sfc
+ucon64 -q --mki=mmx3_zeroproject.sfc mmx3_msu1_zero.sfc
+ucon64 -q --snes --chk mmx3_msu1_zero_emulator.sfc
+ucon64 -q --mki=mmx3_zeroproject.sfc mmx3_msu1_zero_emulator.sfc
+
 copy mmx3_msu1.ips MegaManX3_MSU1
 copy mmx3_msu1_emulator.ips MegaManX3_MSU1
+copy mmx3_msu1_zero.ips MegaManX3_MSU1
+copy mmx3_msu1_zero_emulator.ips MegaManX3_MSU1
 copy README.txt MegaManX3_MSU1
 copy mmx3_msu1.msu MegaManX3_MSU1
 copy mmx3_msu1.xml MegaManX3_MSU1
@@ -20,4 +28,6 @@ copy manifest.bml MegaManX3_MSU1
 
 del /q mmx3_msu1.ips
 del /q mmx3_msu1_emulator.ips
+del /q mmx3_msu1_zero.ips
+del /q mmx3_msu1_zero_emulator.ips
 rmdir /s /q MegaManX3_MSU1

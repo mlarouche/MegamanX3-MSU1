@@ -50,6 +50,13 @@ $00/84E4 20 FD 84    JSR $84FD  [$00:84FD]   A:981E X:00FF Y:007D P:envMXdIzc
 $00/84E4 20 FD 84    JSR $84FD  [$00:84FD]   A:0C1D X:00FE Y:0077 P:envMXdIzc
 
 
+; ================
+; = Zero Project =
+; ================
+$00:84E4 is still Play Music Routine
+$7E:2442 / $088442 is still Play SFX Routine $040442
+$068075 is still NMI hijack
+
 =========
 = Music =
 =========
